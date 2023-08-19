@@ -1,74 +1,136 @@
 "use strict";
 
-function generateRandomArray(size, min, max) {
-  var randomArray = [];
-  for (var i = 0; i < size; i++) {
-    var randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    randomArray.push(randomNum);
-  }
-  return randomArray;
-}
-var arraySize = 100000; // Adjust the size of the array as needed
-var minValue = 1; // Minimum value of the random numbers
-var maxValue = 10000; // Maximum value of the random numbers
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/
+(function () {
+  // webpackBootstrap
+  /******/
+  "use strict";
 
-var array = generateRandomArray(arraySize, minValue, maxValue);
-function bubbleSort(array) {
-  for (var main = 0; main < array.length; main++) {
-    for (var inner = 0; inner < array.length - main - 1; inner++) {
-      if (array[inner] > array[inner + 1]) {
-        var temp = array[inner];
-        array[inner] = array[inner + 1];
-        array[inner + 1] = temp;
+  /******/
+  var __webpack_modules__ = {
+    /***/"./app.js":
+    /*!****************!*\
+      !*** ./app.js ***!
+      \****************/
+    /***/
+    function appJs(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+      eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   hello: () => (/* binding */ hello)\n/* harmony export */ });\nfunction hello() {\n  console.log(\"hello world\");\n}\n\n//# sourceURL=webpack://nodepratice/./app.js?");
+
+      /***/
+    },
+
+    /***/"./hello.js":
+    /*!******************!*\
+      !*** ./hello.js ***!
+      \******************/
+    /***/
+    function helloJs(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+      eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.js */ \"./app.js\");\n\n(0,_app_js__WEBPACK_IMPORTED_MODULE_0__.hello)();\n\n//# sourceURL=webpack://nodepratice/./hello.js?");
+
+      /***/
+    }
+
+    /******/
+  };
+  /************************************************************************/
+  /******/ // The module cache
+  /******/
+  var __webpack_module_cache__ = {};
+  /******/
+  /******/ // The require function
+  /******/
+  function __webpack_require__(moduleId) {
+    /******/ // Check if module is in cache
+    /******/var cachedModule = __webpack_module_cache__[moduleId];
+    /******/
+    if (cachedModule !== undefined) {
+      /******/return cachedModule.exports;
+      /******/
+    }
+    /******/ // Create a new module (and put it into the cache)
+    /******/
+    var module = __webpack_module_cache__[moduleId] = {
+      /******/ // no module.id needed
+      /******/ // no module.loaded needed
+      /******/exports: {}
+      /******/
+    };
+    /******/
+    /******/ // Execute the module function
+    /******/
+    __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+    /******/
+    /******/ // Return the exports of the module
+    /******/
+    return module.exports;
+    /******/
+  }
+  /******/
+  /************************************************************************/
+  /******/ /* webpack/runtime/define property getters */
+  /******/
+  (function () {
+    /******/ // define getter functions for harmony exports
+    /******/__webpack_require__.d = function (exports, definition) {
+      /******/for (var key in definition) {
+        /******/if (__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+          /******/Object.defineProperty(exports, key, {
+            enumerable: true,
+            get: definition[key]
+          });
+          /******/
+        }
+        /******/
       }
-    }
-  }
-  return array;
-}
-var time1 = performance.now();
-bubbleSort(array);
-console.log((performance.now() - time1) / 1000);
-function selectionSort(array) {
-  for (var main = 0; main < array.length; main++) {
-    for (var inner = main; inner < array.length; inner++) {
-      if (array[main] > array[inner]) {
-        var temp = array[inner];
-        array[inner] = array[main];
-        array[main] = temp;
+      /******/
+    };
+    /******/
+  })();
+  /******/
+  /******/ /* webpack/runtime/hasOwnProperty shorthand */
+  /******/
+  (function () {
+    /******/__webpack_require__.o = function (obj, prop) {
+      return Object.prototype.hasOwnProperty.call(obj, prop);
+    };
+    /******/
+  })();
+  /******/
+  /******/ /* webpack/runtime/make namespace object */
+  /******/
+  (function () {
+    /******/ // define __esModule on exports
+    /******/__webpack_require__.r = function (exports) {
+      /******/if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+        /******/Object.defineProperty(exports, Symbol.toStringTag, {
+          value: 'Module'
+        });
+        /******/
       }
-    }
-  }
-  return array;
-}
-var time2 = performance.now();
-selectionSort(array);
-console.log((performance.now() - time2) / 1000);
-function quickSort(array) {
-  var left = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var right = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : array.length - 1;
-  if (left >= right) return;
-  var pivotIndex = partition(array, left, right);
-  quickSort(array, left, pivotIndex - 1);
-  quickSort(array, pivotIndex + 1, right);
-  return array;
-}
-function partition(array, left, right) {
-  var pivotValue = array[right];
-  var pivotIndex = left;
-  for (var i = left; i < right; i++) {
-    if (array[i] < pivotValue) {
-      swap(array, i, pivotIndex);
-      pivotIndex++;
-    }
-  }
-  swap(array, pivotIndex, right);
-  return pivotIndex;
-}
-function swap(array, i, j) {
-  var temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
-}
-var time3 = performance.now();
-var sortedArray = quickSort(array);
-console.log((performance.now() - time3) / 1000);
+      /******/
+      Object.defineProperty(exports, '__esModule', {
+        value: true
+      });
+      /******/
+    };
+    /******/
+  })();
+  /******/
+  /************************************************************************/
+  /******/
+  /******/ // startup
+  /******/ // Load entry module and return exports
+  /******/ // This entry module can't be inlined because the eval devtool is used.
+  /******/
+  var __webpack_exports__ = __webpack_require__("./hello.js");
+  /******/
+  /******/
+})();
