@@ -388,6 +388,7 @@
 //* using setTimeout in a loop to change UI is not recommended, instead use requestNextAnimationFrame, this is because requestAnimationFrame runs when browsers decides to do so on the other hand setTimeout will force the browser to change ui even if it is not neccesary for example change a div position on a screen 80 times in a sec because the loop runs 80 times in a minute but the screen is only 60 hrtz, for example a setTimeOut let say will run 4 times in a sec but the screen framerate is only 1 per sec.
 
 //! MicroTasks
+
 // while(true){
 //   Promise.resolve().then(()=>console.log('here'))
 // }
@@ -410,6 +411,10 @@
 
 //* render steps all run together in a single thread tick any new render requests during this process will be queued for later, and task queues will run one by one in each respective tick and new task will be added on to the stack for later execution. Microtask run once all the javascript is executed and there is nothing in the task queue, but once the execution starts here it will also execute all the new requested microtask that are requested in the process phase, this means added a microtask to a infinite loop will freeze the browser
 
+// Microtasks are a category of tasks that execute immediately after the currently executing script and before yielding back to the event loop. Microtasks have a higher priority than regular tasks (often referred to as macrotasks) in the event loop. Examples of microtasks include promise handlers (then, catch, or finally callbacks).
+
+
+
 // const button = document.querySelector('button')
 // const box = document.querySelector('div')
 
@@ -424,6 +429,12 @@
 // });
 
 //! Promises / callback hell
+
+// Callbacks, in the context of the event loop, typically refer to tasks that get enqueued as a result of events or timers (like setTimeout). These are macrotasks.
+
+// How Callbacks (Macrotasks) Work:
+// When an event occurs or a timer fires, and if there's an associated callback, that callback gets enqueued in the task queue.
+// Macrotasks (like these callbacks) are processed one at a time from the task queue. After each macrotask, the microtask queue is processed completely before the next macrotask begins.
 
 //? PROMISES
 
