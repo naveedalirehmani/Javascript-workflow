@@ -430,6 +430,12 @@
 
 //! Promises / callback hell
 
+// Callbacks, in the context of the event loop, typically refer to tasks that get enqueued as a result of events or timers (like setTimeout). These are macrotasks.
+
+// How Callbacks (Macrotasks) Work:
+// When an event occurs or a timer fires, and if there's an associated callback, that callback gets enqueued in the task queue.
+// Macrotasks (like these callbacks) are processed one at a time from the task queue. After each macrotask, the microtask queue is processed completely before the next macrotask begins.
+
 //? PROMISES
 
 //* A “producing code” that does something and takes time. For instance, some code that loads the data over a network. That’s a “singer”.
