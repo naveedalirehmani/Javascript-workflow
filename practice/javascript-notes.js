@@ -772,3 +772,45 @@
 // console.log(binary)
 // console.log(octal)
 
+
+// function same(array, array1) {
+//   //check if all values in both arrays are numeric & not float.
+
+//   //check if arrays lenth is same
+//   if (array.length !== array1.length) {
+//     return false;
+//   }
+
+//   // result
+//   let result = true;
+
+//   // loop
+//   for (let outer = 0; outer < array.length; outer++) {
+
+//     // return if result was set to false;
+//     if (!result) break;
+
+//     // search for a squared value.    
+//     for (let inner = 0; inner < array1.length; inner++) {
+
+//       // breaking loop if found
+//       if (array[outer] ** 2 === array1[inner]) {
+//         //setting the matched value to false so that it does not match again.
+//         array1[inner] = false;
+//         break;
+//       }
+
+//       // result to false if not squared value was found
+//       if (inner === array.length - 1) {
+//         result = false;
+//         break;
+//       }
+//     }
+//   }
+
+//   // return boolean
+//   return result;
+// }
+
+// const result = same([1, 2, 1], [4,4,1]);
+// console.log(result);
