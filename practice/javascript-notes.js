@@ -814,3 +814,39 @@
 
 // const result = same([1, 2, 1], [4,4,1]);
 // console.log(result);
+
+
+
+// function anagram(word1, word2) {
+
+//   if (word1.length !== word2.length) {
+//     return false
+//   }
+
+//   const word1Frequency = {}
+//   const word2Frequency = {}
+
+//   for (let letter of word1) {
+//     word1Frequency[letter] = ++word1Frequency[letter] || 1
+//   }
+
+//   for (let letter of word2) {
+//     word2Frequency[letter] = ++word2Frequency[letter] || 1
+//   }
+
+//   for (let props in word1Frequency) {
+//     if (!(word2Frequency[props] && word2Frequency[props] === word1Frequency[props])) {
+//       return false
+//     }
+//   }
+
+//   return true
+
+// }
+
+// console.log(anagram('iceman', 'cinema')); // Expected output: true
+// console.log(anagram('hello', 'world')); // Expected output: false
+// console.log(anagram('listen', 'silent')); // Expected output: true
+// console.log(anagram('debit card', 'bad credit')); // Expected output: true
+// console.log(anagram('test', 'rest')); // Expected output: false
+// console.log(anagram('school master', 'the classroom')); // Expected output: true
