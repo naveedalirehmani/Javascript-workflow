@@ -1,5 +1,4 @@
 //! "USE STRICT"
-
 //? why use strict exists.
 
 //! VARIABLES
@@ -134,28 +133,25 @@
 //? to select body
 
 // const body = document.body;
-
 //? to createElements
 
 // const div = document.createElement('div');
 // const H1 = document.createElement('h1');
 
 //? both are same but with append you can append text
-
 // body.append(div); //* or body.append('appending text')
 // body.appendChild(div); //* only appendChild with elements no inserting text like append;
 
 //?adding Text
-
 // H1.append('text with append'); //* for appending element into element but can also create text;
 // H1.textContent = 'text with textContent'; //* on console will give all content eg display:none and also all spaces;
 // H1.innerText = 'text with innerText'; //* on console only will give text;
-// H1.innerHTML = 'text with innerHtml'; //* or H1.innerHTML = '<p>a p tag with innerHTMl</P>';
+// H1.innerHTML = 'text with innerHtml <p>hello</p>'; //* or H1.innerHTML = '<p>a p tag with innerHTMl</P>';
 // div.append(H1);
 
 //? removing element from the DOM
 
-// const title = document.querySelector('.titleclass'); //* selecting with class id or element type;
+// const title = document.querySelector('button'); //* selecting with class id or element type;
 // div.append(title);
 // div.removeChild(title); //* to remove from parent;
 // title.remove(); //* remove the respective element;
@@ -413,8 +409,6 @@
 
 // Microtasks are a category of tasks that execute immediately after the currently executing script and before yielding back to the event loop. Microtasks have a higher priority than regular tasks (often referred to as macrotasks) in the event loop. Examples of microtasks include promise handlers (then, catch, or finally callbacks).
 
-
-
 // const button = document.querySelector('button')
 // const box = document.querySelector('div')
 
@@ -484,12 +478,9 @@
 //   });
 // }
 
-
-
 // fetch('https;a').then((data)=>{console.log(data)}).catch(()=>{
 
 // })
-
 
 // let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
 // promise.then(
@@ -763,28 +754,21 @@
 //   console.log(user);
 // }
 
-// const button = document.querySelector('.click')
-// const grand = document.querySelector('.grand')
-// const parent = document.querySelector('.parent')
-// const child = document.querySelector('.child')
+//? objects
+//? numbers
 
-// grand.addEventListener('click',()=>{
-//     console.log("grand clicked")
-// })
-// parent.addEventListener('click',()=>{
-//     console.log("parent clicked")
-// })
-// child.addEventListener('click',()=>{
-//     console.log("child clicked")
-// })
+// const billion = 1_000_000_000
+// const billion2 = 1e9
+// const small = 1e-6
 
-// grand.addEventListener('click',()=>{
-//     console.log("grand clicked capture")
-// },{capture:true})
-// parent.addEventListener('click',()=>{
-//     console.log("parent clicked capture")
-// },{capture:true})
-// child.addEventListener('click',()=>{
-//     console.log("child clicked capture")
-// },{capture:true})
+// const hex = 0xff
+// const binary = 0b11111111
+// const octal = 0o377
+
+// console.log(billion)
+// console.log(billion2)
+// console.log(small)
+// console.log(hex)
+// console.log(binary)
+// console.log(octal)
 
