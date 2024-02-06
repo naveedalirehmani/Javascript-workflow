@@ -900,3 +900,31 @@
 // }
 
 // console.log(repeatingString("hellothere"));
+
+// function maxSumSubArray(array,num) {
+
+//     if(!array.length) return null;
+
+//     let total = 0;
+    
+//     for (let index = 0; index < num; index++) {
+//         total += array[index];
+//     }
+    
+//     let sum = total;
+
+//     for (let index = num; index < array.length; index++) {
+//         sum = sum - array[index-num] + array[index]
+//         total = Math.max(sum,total)
+//     }
+
+//     return total
+
+// }
+
+// console.log(maxSumSubArray([2, 6, 9, 2, 1, 8, 5, 6, 3], 3)); // Expected output: 19
+// console.log(maxSumSubArray([1, 2, 3, 4, 5], 2));            // Expected output: 9
+// console.log(maxSumSubArray([1, 2, 3, 4, 5], 5));            // Expected output: 15
+// console.log(maxSumSubArray([1, -1, 2, -2, 3, -3], 3));      // Expected output: 4
+// console.log(maxSumSubArray([10, -2, 5, 6, -1, 2], 3));      // Expected output: 13
+
