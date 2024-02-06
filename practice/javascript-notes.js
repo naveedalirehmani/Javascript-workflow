@@ -928,3 +928,33 @@
 // console.log(maxSumSubArray([1, -1, 2, -2, 3, -3], 3));      // Expected output: 4
 // console.log(maxSumSubArray([10, -2, 5, 6, -1, 2], 3));      // Expected output: 13
 
+
+// var firstUniqChar = function(s) {
+//     let left = 0;
+//     let array = s.split("")
+
+//     const frequency = new Map()
+
+//     for(let i = 0 ; i<array.length ; i++){
+//         if(frequency.has(array[i])){
+//             frequency.set(array[i],frequency.get(array[i])+1)
+//         }else {
+//             frequency.set(array[i],1)
+//         }
+//     }
+
+//     console.log(frequency)
+//     const values = Array.from(frequency.entries())
+    
+//     console.log(values)
+//     for(let i = 0; i<values.length; i++){
+//         console.log(values[i][1])
+//         if(values[i][1]){
+//             return i
+//         }
+//     }
+
+//     return null
+// };
+
+// console.log(firstUniqChar('leetcode'))
