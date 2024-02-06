@@ -772,6 +772,7 @@
 // console.log(binary)
 // console.log(octal)
 
+//? DSA
 
 // function same(array, array1) {
 //   //check if all values in both arrays are numeric & not float.
@@ -790,7 +791,7 @@
 //     // return if result was set to false;
 //     if (!result) break;
 
-//     // search for a squared value.    
+//     // search for a squared value.
 //     for (let inner = 0; inner < array1.length; inner++) {
 
 //       // breaking loop if found
@@ -815,7 +816,7 @@
 // const result = same([1, 2, 1], [4,4,1]);
 // console.log(result);
 
-
+//! frequency method.
 
 // function anagram(word1, word2) {
 
