@@ -772,6 +772,7 @@
 // console.log(binary)
 // console.log(octal)
 
+//? DSA
 
 // function same(array, array1) {
 //   //check if all values in both arrays are numeric & not float.
@@ -790,7 +791,7 @@
 //     // return if result was set to false;
 //     if (!result) break;
 
-//     // search for a squared value.    
+//     // search for a squared value.
 //     for (let inner = 0; inner < array1.length; inner++) {
 
 //       // breaking loop if found
@@ -815,7 +816,7 @@
 // const result = same([1, 2, 1], [4,4,1]);
 // console.log(result);
 
-
+//! frequency method.
 
 // function anagram(word1, word2) {
 
@@ -850,3 +851,110 @@
 // console.log(anagram('debit card', 'bad credit')); // Expected output: true
 // console.log(anagram('test', 'rest')); // Expected output: false
 // console.log(anagram('school master', 'the classroom')); // Expected output: true
+
+//! Multiple pointer method
+
+// function countUniqueValues(sortedArray) {
+//   if (!sortedArray.length) return 0;
+//   let current = 0;
+//   for (let index = 0; index < sortedArray.length; index++) {
+//     if (!(sortedArray[current] === sortedArray[index])) {
+//       current++;
+//       sortedArray[current] = sortedArray[index];
+//     }
+//   }
+//   return current + 1;
+// }
+
+// console.log(countUniqueValues([1, 1, 1, 2, 2, 3]));
+// console.log(
+//   countUniqueValues([1, 2, 3, 4, 4, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10, 15, 17])
+// );
+// console.log(countUniqueValues([]));
+
+//---
+
+// function repeatingString(para) {
+//   //return if string is empty
+
+//   //to lowercase & split
+//   const lowerCase = para.toLowerCase().split("");
+
+//   let left = 0;
+//   let total = 0;
+
+//   let count = 0;
+//   for (let index = 1; index <= lowerCase.length; index++) {
+//     if (lowerCase[left] === lowerCase[index - 1]) {
+//       ++count;
+//     } else {
+//       left = index;
+//       if (count > total) {
+//         total = count;
+//         count = 0;
+//       }
+//     }
+//   }
+
+//   return total;
+// }
+
+// console.log(repeatingString("hellothere"));
+
+// function maxSumSubArray(array,num) {
+
+//     if(!array.length) return null;
+
+//     let total = 0;
+    
+//     for (let index = 0; index < num; index++) {
+//         total += array[index];
+//     }
+    
+//     let sum = total;
+
+//     for (let index = num; index < array.length; index++) {
+//         sum = sum - array[index-num] + array[index]
+//         total = Math.max(sum,total)
+//     }
+
+//     return total
+
+// }
+
+// console.log(maxSumSubArray([2, 6, 9, 2, 1, 8, 5, 6, 3], 3)); // Expected output: 19
+// console.log(maxSumSubArray([1, 2, 3, 4, 5], 2));            // Expected output: 9
+// console.log(maxSumSubArray([1, 2, 3, 4, 5], 5));            // Expected output: 15
+// console.log(maxSumSubArray([1, -1, 2, -2, 3, -3], 3));      // Expected output: 4
+// console.log(maxSumSubArray([10, -2, 5, 6, -1, 2], 3));      // Expected output: 13
+
+
+// var firstUniqChar = function(s) {
+//     let left = 0;
+//     let array = s.split("")
+
+//     const frequency = new Map()
+
+//     for(let i = 0 ; i<array.length ; i++){
+//         if(frequency.has(array[i])){
+//             frequency.set(array[i],frequency.get(array[i])+1)
+//         }else {
+//             frequency.set(array[i],1)
+//         }
+//     }
+
+//     console.log(frequency)
+//     const values = Array.from(frequency.entries())
+    
+//     console.log(values)
+//     for(let i = 0; i<values.length; i++){
+//         console.log(values[i][1])
+//         if(values[i][1]){
+//             return i
+//         }
+//     }
+
+//     return null
+// };
+
+// console.log(firstUniqChar('leetcode'))
