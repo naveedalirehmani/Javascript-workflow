@@ -851,3 +851,25 @@
 // console.log(anagram('debit card', 'bad credit')); // Expected output: true
 // console.log(anagram('test', 'rest')); // Expected output: false
 // console.log(anagram('school master', 'the classroom')); // Expected output: true
+
+//! Multiple pointer method
+
+// function countUniqueValues(sortedArray) {
+//   if (!sortedArray.length) return 0;
+//   let current = 0;
+//   for (let index = 0; index < sortedArray.length; index++) {
+//     if (!(sortedArray[current] === sortedArray[index])) {
+//       current++;
+//       sortedArray[current] = sortedArray[index];
+//     }
+//   }
+//   return current + 1;
+// }
+
+// console.log(countUniqueValues([1, 1, 1, 2, 2, 3]));
+// console.log(
+//   countUniqueValues([1, 2, 3, 4, 4, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10, 15, 17])
+// );
+// console.log(countUniqueValues([]));
+
+//---
