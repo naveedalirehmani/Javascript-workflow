@@ -873,3 +873,30 @@
 // console.log(countUniqueValues([]));
 
 //---
+
+// function repeatingString(para) {
+//   //return if string is empty
+
+//   //to lowercase & split
+//   const lowerCase = para.toLowerCase().split("");
+
+//   let left = 0;
+//   let total = 0;
+
+//   let count = 0;
+//   for (let index = 1; index <= lowerCase.length; index++) {
+//     if (lowerCase[left] === lowerCase[index - 1]) {
+//       ++count;
+//     } else {
+//       left = index;
+//       if (count > total) {
+//         total = count;
+//         count = 0;
+//       }
+//     }
+//   }
+
+//   return total;
+// }
+
+// console.log(repeatingString("hellothere"));
