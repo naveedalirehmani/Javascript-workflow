@@ -958,3 +958,39 @@
 // };
 
 // console.log(firstUniqChar('leetcode'))
+
+
+
+//!----------------
+// function Anagrams(str1, str2) {
+//     const anagramStr1 = str1.toLowerCase()
+//     const anagramStr2 = str2.toLowerCase()
+
+//     if (anagramStr1.length !== anagramStr2.length) {
+//         return false;
+//     }
+
+//     const counter = {};
+
+//     for (let char of anagramStr1) {
+//         counter[char] = (counter[char] || 0) + 1
+//         console.log(counter[char])
+//     }
+
+//     for (let char of anagramStr2) {
+//         if (!counter[char]) {
+//             return false;
+//         }
+//         counter[char]--;
+//     }
+
+//     return true
+// }
+
+// console.log(Anagrams("listen", "silent")); // true
+// console.log(Anagrams("hello", "world"));   // false
+// console.log(Anagrams("Dormitory", "dirty room")); // true
+// console.log(Anagrams("astronomer", "moon starer")); // true
+// console.log(Anagrams("debit card", "bad credit")); // true
+// console.log(Anagrams("hello", "hola")); // false
+
