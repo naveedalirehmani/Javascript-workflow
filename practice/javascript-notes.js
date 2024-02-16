@@ -1142,3 +1142,26 @@
 //   )
 // );
 
+//? searching for a pattern in a string. navie approach.
+// function stringPattern(string, pattern) {
+
+//   let counter = 0;
+
+//   for (let index = 0; index < string.length; index++) {
+//     for (let innerIndex = 0; innerIndex < pattern.length; innerIndex++) {
+//       if(!(pattern[innerIndex] === string[index+innerIndex])){
+//         break;
+//       }
+//       if(innerIndex == pattern.length-1){
+//         counter++
+//       }
+//     }
+//   }
+//   return counter;
+// }
+
+// console.log(stringPattern('omglaksomgjdhglkajshdomglkgjahomgsdg', "omg")); // Expected output: 4
+// console.log(stringPattern('omglomglomglomg', "omg")); // Expected output: 4
+// console.log(stringPattern('abcabcabcabcabc', "abc")); // Expected output: 5
+// console.log(stringPattern('aaaaaa', "aa")); // Expected output: 5
+// console.log(stringPattern('abcdefg', "xyz")); 
