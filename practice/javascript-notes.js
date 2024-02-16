@@ -901,6 +901,7 @@
 
 // console.log(repeatingString("hellothere"));
 
+//? max sub array with sliding window approach
 // function maxSumSubArray(array,num) {
 
 //     if(!array.length) return null;
@@ -928,6 +929,7 @@
 // console.log(maxSumSubArray([1, -1, 2, -2, 3, -3], 3));      // Expected output: 4
 // console.log(maxSumSubArray([10, -2, 5, 6, -1, 2], 3));      // Expected output: 13
 
+//? FAILED:  first unique character in a string with frequency counter method.
 // var firstUniqChar = function(s) {
 //     let left = 0;
 //     let array = s.split("")
@@ -958,7 +960,7 @@
 
 // console.log(firstUniqChar('leetcode'))
 
-//!----------------
+//? Anagrams with fequency counter method.
 // function Anagrams(str1, str2) {
 //     const anagramStr1 = str1.toLowerCase()
 //     const anagramStr2 = str2.toLowerCase()
@@ -991,6 +993,7 @@
 // console.log(Anagrams("debit card", "bad credit")); // true
 // console.log(Anagrams("hello", "hola")); // false
 
+//? collecting odd values
 // function collectOddValues(array){
 
 //     let result = []
@@ -1006,6 +1009,7 @@
 
 // console.log(collectOddValues([1,2,3,4,5,6,7,8,9]))
 
+//? linear search
 // function lenearSearch (array,find){
 
 //     //loop through the list.
@@ -1022,52 +1026,48 @@
 
 // console.log(lenearSearch([1,2,3,4,5,6,7,8,9],1))
 
-function binarySearch(array, value) {
-  let left = 0;
-  let right = array.length - 1;
-  let middle = 0;
-  let found = 0;
+//? FAILED : binary search.
+// function binarySearch(nums, target) {
+//   let left = 0;
+//   let right = nums.length - 1;
+//   let middle = Math.floor(nums.length / 2);
+//   let found = 0;
 
-  
-  let loop = 0;
-  while (loop < 4) {
-    loop++;
-    
-    //checking to see if we ran out of options
-    
-    if (right - left == 1) {
-      found = -1;
-      return;
-    }
-    
-    //deciding middle point.
-    if ((right - left) % 2 == 0) {
-      middle = (right - left) / 2 - 1;
-    } else {
-      middle = Math.ceil((right - left) / 2);
-    }
+//   while (found === 0) {
 
-    console.log(left, right, middle);
+//     if(nums[0] == target){
+//         return 0
+//     }
 
-    //checking to see if values was found
-    console.log(array[middle]);
-    if (array[middle] === value) {
-      found = value;
-      return;
-    }
+//     if (right - left === 1) {
+//       found = -1;
+//     }
 
-    if (value > array[middle]) {
-      left = middle;
-    } else {
-      right = middle;
-    }
-  }
+//     if (nums[middle] === target) {
+//         found = middle;
+//     }
 
-  return found;
-}
+//     if (target > nums[middle]) {
+//         left = middle;
+//         middle = (right-left===1) ? Math.ceil((right - left) / 2) + middle : Math.floor((right - left) / 2) + middle;
+//     } else {
+//         right = middle;
+//         middle =  middle - Math.floor((right - left) / 2);
+//     }
+// }
 
-console.log(binarySearch([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6));
+//   return found;
+// }
 
+// console.log(binarySearch([9, 29, 29, 30, 35, 53, 60, 84, 89, 95, 100,101], 101));
+// console.log(binarySearch([1, 2, 3, 4, 5], 3)); // Output: 2
+// console.log(binarySearch([1, 2, 3, 4, 5], 5)); // Output: 4
+// console.log(binarySearch([1, 2, 3, 4, 5], 6)); // Output: -1 (Element not found)
+// console.log(binarySearch([1, 2, 3, 4, 5, 6], 1)); // Output: 0
+// console.log(binarySearch([1, 2, 3, 4, 5, 6], 6)); // Output: 5
+// console.log(binarySearch([1, 2, 3, 4, 5, 6], 4)); // Output: 3
+// console.log(binarySearch([10, 20, 30, 40, 50], 30)); // Output: 2
+// console.log(binarySearch([10, 20, 30, 40, 50], 25)); // Output: -1 (Element not found)
 // console.log(
 //   binarySearch(
 //     [
@@ -1141,3 +1141,4 @@ console.log(binarySearch([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6));
 //     985
 //   )
 // );
+
