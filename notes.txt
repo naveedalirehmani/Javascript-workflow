@@ -1,3 +1,3 @@
-tsc
-npx babel src/index.js --out-file dist/index.js
+npx tsc
 npx webpack --config webpack.config.js
+npx babel src/bundle.js --out-file dist/index.js

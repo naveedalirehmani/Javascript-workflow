@@ -717,7 +717,7 @@
 // ]);
 
 //? USING PLAIN OBJECTS TO CREATE MAPS WITH OBJECT.ENTRIES()
-//* we can also create an object with Object.fromEntries() this will reverse Object.Enties()
+//* we can also create an object with Object.fromEntries() this will reverse Object.Entries()
 
 //! SETS
 
@@ -748,7 +748,7 @@
 
 // console.log( set.size );
 
-//? CAN LOOP OVER WITH OF
+//? CAN LOOP OVER WITH FOR OF
 
 // for (let user of set) {
 //   console.log(user);
@@ -1165,3 +1165,15 @@
 // console.log(stringPattern('abcabcabcabcabc', "abc")); // Expected output: 5
 // console.log(stringPattern('aaaaaa', "aa")); // Expected output: 5
 // console.log(stringPattern('abcdefg', "xyz")); 
+
+
+
+// const button = document.querySelector('.outlook');
+
+// button.onclick = async ()=>{
+//     const response  = await fetch('http://localhost:4000/v1/authentication/oauth/outlook',{
+//         method:"GET"
+//     })
+//     const data = await response.json()
+    
+// }

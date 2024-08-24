@@ -1,14 +1,27 @@
-{
-    "compilerOptions": {
-      "outDir": "./dist/",
-      "noImplicitAny": true,
-      "module": "es6",
-      "target": "es6",
-      "jsx": "react",
-      "allowJs": true
-    },
-    "include": [
-      "./src/**/*"
-    ]
-}
+// {
+//     "compilerOptions": {
+//       "outDir": "./dist/",
+//       "noImplicitAny": true,
+//       "module": "es6",
+//       "target": "es6",
+//       "jsx": "react",
+//       "allowJs": true
+//     },
+//     "include": [
+//       "./src/**/*"
+//     ]
+// }
   
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+  },
+  "include": ["src/**/*.ts"],
+  // "include": ["src/**/*.ts", "tests/**/*.ts"],
+  // "exclude": ["node_modules"]
+}
