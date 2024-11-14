@@ -39,3 +39,12 @@
 
 // Can the output be derived from the input?
 //  yes.
+
+// Labelling the important pieces.
+//  we will loop over the array of integers with for of loop
+//  check to see if if the current integer in the interation is larger than the upcoming integer
+//  the current integer in the iteration will be array[i], the upcoming integer will equal to array[i+1]
+//  if array[i] is < array[i+1], contiue with the next iteration;
+//  if array[i] is = array[i+1], contiue with the next iteration;
+//  if array[i] is not < array[i+!] return false.
+//  after the loop ends return true.
