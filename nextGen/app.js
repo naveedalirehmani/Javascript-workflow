@@ -1,35 +1,50 @@
-//! question.
-
-//! student marks 
-//!  0-35%   -> your grade is F
-//!  36-50%  -> your grade is D 
-//!  51-60   -> your grade is C
-//!  61-80   -> your grade is B
-//!  81-90   -> your grade is A
-//!  91-100  -> your grade is A+
-
-
 //? Understanding the problem.
 
-//?  Can I restate the problem?
-//?      ->  We are going to create a calculator that calculates a students grade based on their 
-//?          marks.
+//? Can I restate the problem?
+//? what are the inputs that go into the problem?
+//? what are the expected output to the problem?
+//? Can the output be derived from the input?
+//? Labelling the important pieces.
 
-//?  what are the inputs that go into the problem?
-//?      ->  your marks in percentage.
+//? ||
+// 1. it will implicitly convert all the operands to boolean.
+// or operator will always try to find first truthly value and return it.
+// if not found it will return last value in the chain.
 
-//?  what are the expected output to the problem?
-//?      ->  Our programe will output the users grade calculated based on the users marks.
+//? &&
+// 2. it will implicitly convert all the operands to boolean.
+// and operator will always try to find first falsy value, if not found
+// it will return the last value in the chain.
 
-//?  Can the output be derived from the input?
-//?      ->  Yes.
+// Write a function that checks whether a given array is sorted in ascending order. The function should:
 
-//?  Labelling the important pieces.
-//?      ->  we are going to write pseudo code.
+// 1. Accept an array of integers as input.
+// 2. Return `true` if the array is sorted in strictly ascending order.
+// 3. Return `false` otherwise.
 
+// function isArrayIsSorted(array){
 
-//TODO  take your marks as input and save them in a variable called userMarks.
-//TODO  we are going to use if else statements
-//TODO      ->  if user marks is greater than 0 & less than 35 we will output Grade F
-//TODO      ->  else if user marks are greater than 35 and less than less then 51 we will output D
-//TODO      ->  else if user marks are greater than 50 and less than 61 we will output C
+// }
+
+// Understanding the problem.
+// Can I restate the problem?
+//  write a function that will take a array of integers as input, the array input will not be empty, we need to return true if the array is sorted, false if not.
+
+// what are the inputs that go into the problem?
+//  an array of integers.
+
+// what are the expected output to the problem?
+//  true if the input array is sorted.
+//  false if the input is not sorted.
+
+// Can the output be derived from the input?
+//  yes.
+
+// Labelling the important pieces.
+//  we will loop over the array of integers with for of loop
+//  check to see if if the current integer in the interation is larger than the upcoming integer
+//  the current integer in the iteration will be array[i], the upcoming integer will equal to array[i+1]
+//  if array[i] is < array[i+1], contiue with the next iteration;
+//  if array[i] is = array[i+1], contiue with the next iteration;
+//  if array[i] is not < array[i+!] return false.
+//  after the loop ends return true.
