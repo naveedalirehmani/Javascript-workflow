@@ -1,6 +1,8 @@
 //! "USE STRICT"
 //? why use strict exists.
 
+const { lookup, promises } = require("dns")
+
 //! VARIABLES
 
 //? A variable
@@ -130,6 +132,14 @@
 //! THE WINDOW OBJECT
 //! DOM MANIPULATION
 
+// const input = document.querySelector('input')
+// const button = document.querySelector('button');
+// const span = document.querySelector('span');
+
+// button.onclick = ()=>{
+//     span.innerText = input.value
+// }
+
 //? to select body
 // const body = document.body;
 
@@ -154,6 +164,7 @@
 
 //? working with attributes
 // console.log(title.getAttribute('class')); //* or title.class
+// const title = document.querySelector('.title')
 // title.setAttribute('id','titleId') //* or title.id = titleId
 // title.removeAttribute('id');
 
@@ -167,7 +178,7 @@
 //* DOM TRAVERSING, it's the act of selecting an element from another element.
 //* THREE WAYS OF TRAVERSING THE DOM
 
-//? 1. UPWARDS 2. DOWNWARDS 3. SIDEWAYS
+//? 1. UPWARDS -> 2. DOWNWARDS -> 3. SIDEWAYS
 
 //? 1. DOWWARDS => children, querySelectorAll, querySelector
 
@@ -767,5 +778,86 @@
 // console.log(binary)
 // console.log(octal)
 
+//? -----------------------------------------------------------------------------
 
+// function isValid(s) {
+//     const open = ["{","[","("]
+//     const bracketRelation = {
+//         ")":"(",
+//         "}":"{",
+//         "]":"["
+//     }
+//     const openingBrackets = [];
+//     const brackets = s.split("");
 
+//     for(let i = 0; i <= brackets.length-1 ; i++){
+//         if(open.includes(brackets[i])){
+//             openingBrackets.push(brackets[i])
+//         }
+//         else {
+//             if(openingBrackets[openingBrackets.length-1] === bracketRelation[brackets[i]]) {
+//                 openingBrackets.pop()
+//             }else {
+//                 return false
+//             }
+//         }
+//     }
+
+//     return openingBrackets.length ? false : true
+// };
+
+// const result = isValid("{{{}}}");
+// console.log(result)
+
+//? -----------------------------------------------------------------------------
+
+// function strStr(haystack, needle) {
+//   const split1 = haystack.split("");
+//   const split2 = needle.split("");
+//   for (let i = 0; i < split1.length - 1; i++) {
+//     if (split1[i] === split2[0]) {
+//       for (let j = 0; j < split2.length; j++) {
+//         console.log(split2[j])
+//         if(split2[j] == split1[i+j] && j === split2.length-1 ) {
+//             return i
+//         }
+//         if(split2[j] == split1[i+j]) {
+//             continue
+//         }
+//         else {
+//             break;
+//         }
+//       }
+//     }
+//   }
+//   return -1
+// }
+
+// console.log(strStr("sadbutsad", "sad"));
+
+// function reversed(string) {
+
+//   function isLetter(letter) {
+//     const code = letter.charCodeAt(0);
+//     return (code >= 65 && code <= 90) || (code >= 97 && code <= 122);
+//   }
+
+//   let reversedWithoutSpecial = ''
+//   for (let index = string.length-1; index >= 0; index--) {
+//     const element = string[index];
+//     if(isLetter(element)){
+//         reversedWithoutSpecial += element
+//     }
+//   }
+
+//   const revsersedArray = reversedWithoutSpecial.split('');
+//   for (let index = 0; index < string.length; index++) {
+//       const element = string[index];
+//       if(!isLetter(element)){
+//         revsersedArray.splice(index,0,element)
+//     }
+//   }
+//   return revsersedArray.join('')
+// }
+
+// console.log(reversed("a-sdf0l9a--s0dfa0sldf[0a[0o"));
