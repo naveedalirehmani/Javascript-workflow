@@ -1,0 +1,10 @@
+.container {
+    border : 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;  
+}
+
+.container > div {
+    border: 1px solid red;
+}
